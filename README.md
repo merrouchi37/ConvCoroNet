@@ -4,10 +4,10 @@
 # Used data
 Referring to the article, the images used in this work have been downloaded from several sources. After the pre-processing operations (elimination of similar images, offline data augmentation), these images are available in Google Drive via the folder [covid-19_data](https://drive.google.com/drive/folders/1yfGRIyKvRRjcM6kcWfAMvB4kaq3wyQeB?usp=sharing). 
 
-The notebook preparing_datasets.ipynb allows to put the images data and their labels into nupmpy tables as mentioned in the following table: [data_train.npy](https://drive.google.com/file/d/1k-2eDTI0UZWvoFr-CmQ6VAYKGT0LZQhI/view?usp=sharing)  &&  [labels_train.npy](https://drive.google.com/file/d/1k-Uhkh2gYogsTiReG373aZRnQiqWok03/view?usp=sharing)
+The notebook __preparing_datasets.ipynb__ allows to put the images data and their labels into nupmpy tables as mentioned in the following table: [data_train.npy](https://drive.google.com/file/d/1k-2eDTI0UZWvoFr-CmQ6VAYKGT0LZQhI/view?usp=sharing)  &&  [labels_train.npy](https://drive.google.com/file/d/1k-Uhkh2gYogsTiReG373aZRnQiqWok03/view?usp=sharing)
 
 # Training and test
-To evaluate the performance of ConCoroNet model, we used 5-fold cross-validation approach. The training set was randomly divided into 5 equal sets, Four of the 5 sets are used for model training, while the fifth is used for the validation set. This operation is repeated five times by shifting the training and the validation sets. Each time the performance of the model is reported. The notebook ConvCoroNet_Training.ipynb allows to train our model for automatic detection of covid-19 from X-ray chest images. The models obtained for all folds: 
+To evaluate the performance of ConCoroNet model, we used 5-fold cross-validation approach. The training set was randomly divided into 5 equal sets, Four of the 5 sets are used for model training, while the fifth is used for the validation set. This operation is repeated five times by shifting the training and the validation sets. Each time the performance of the model is reported. The notebook __ConvCoroNet_Training.ipynb__ allows to train our model for automatic detection of covid-19 from X-ray chest images. The models obtained for all folds: 
 
 | fold #         | Validation Accuracy(%) | Downloads     |
 |----------------|------------------------|---------------|
@@ -18,4 +18,5 @@ To evaluate the performance of ConCoroNet model, we used 5-fold cross-validation
 | fold 5       |        98,33           | [Download](https://drive.google.com/file/d/102uSaE2s4C27E0n03AypBsafw-lr_tqo/view?usp=sharing) |
 | Average       |        98,60           | --- |      
  
-The notebook ConvCoroNet_evaluation.ipynb displays results for accuracy, recall, precision and f1-score as well as confusion matrices and ROC curves for the 5-folds' models. It also calculates the average AUC obtained.
+The notebook __ConvCoroNet_evaluation.ipynb__ displays results for accuracy, recall, precision and f1-score as well as confusion matrices and ROC curves for the 5-folds' models. It also calculates the average AUC obtained.
+The __utils.py__ file containes some functions needed by the other files. 
