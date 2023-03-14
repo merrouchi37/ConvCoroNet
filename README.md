@@ -26,7 +26,7 @@ The following table contains the 5 models obtained (5-fold cross-validation) aft
 | fold 2    |        99,67           | [Download](https://drive.google.com/file/d/1I6zNOrXxNUXDtVBCnScbotL4Cho8kPGM/view?usp=sharing) |
 | fold 3          |        99,17           | [Download](https://drive.google.com/file/d/1-1XIV_RlWkuwf0rj5uMmluLAOK43hOv8/view?usp=sharing) |
 | fold 4       |        99,50           | [Download](https://drive.google.com/file/d/1dCGG005feQVhN_RRE0TMYCV2eD_IEPyB/view?usp=sharing) |
-| fold 5       |        99,67           | [Download]() |
+| fold 5       |        99,67           | [Download](https://drive.google.com/file/d/1nZpRS9PQRxsQSEUbBzfzv_rqWZ4O58xn/view?usp=sharing) |
 | Average       |        99,50           | --- |      
  
 ### The files exposed above permit the reproduction of the results obtained in the paper "ConvCoroNet: A deep convolutional neural network optimized with iterative thresholding algorithm for Covid-19 detection using chest X-ray images".
