@@ -15,6 +15,7 @@ To evaluate the performance of ConCoroNet model, we used 5-fold cross-validation
 * The notebook __Covid19_Evaluation_Models_Itao.ipynb__ allows to evaluate differents obtained models after training. It gives different metrics (recall, precision, f1-score ...), confusion matrices and ROC curves for the different used models trained with Itao.
 * The notebook __Covid19_Evaluation_InceptionV3_Other_Optimizers.ipynb__ allows to evaluate the models based on InceptionV3 and trained with different optimizers.
 * Notebook __Exploitation_matrices__ groups some functions that calculate results and plot barcharts used in paper.
+* For the interpretability of the model, the notebook __Heatmap_grad_cam.ipynb__, uses the Grad-CAM heatmap approach to highlight the important areas that the model emphasizes in the X-Ray image. The file __examples_images_grad_cam.txt__ contains some file names used to illustrate it.
 * The __utils.py__ file containes some functions needed by the other files.      
 
 The following table contains the 5 models obtained (5-fold cross-validation) after training the proposed model based on InceptionV3 with the new optimizer Itao: 
