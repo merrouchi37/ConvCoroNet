@@ -60,7 +60,7 @@ def evaluation_metrics(model, data_val, labels_val, i, batch_size):
 def roc_curv_plot(labels_val, predIdxs, num_fold):
     font = {
       'family':'Times New Roman',
-      'size':11
+      'size':13
       }
 
     matplotlib.rc('font', **font)
@@ -68,7 +68,7 @@ def roc_curv_plot(labels_val, predIdxs, num_fold):
     class_names = ['Covid-19','Normal','Pneumonia'] #['Covid-19','Normal','Pneumonia']
     n_classes = 3 #3
     # Plot linewidth.
-    lw = 2
+    lw = 3
   
     # Compute ROC curve and ROC area for each class
     fpr = dict()
@@ -100,7 +100,7 @@ def roc_curv_plot(labels_val, predIdxs, num_fold):
     roc_auc["macro"] = auc(fpr["macro"], tpr["macro"])
   
     # Plot all ROC curves
-    plt.figure(1, figsize=(7.5,7.5))
+    plt.figure(1, figsize=(8,8))
     #plt.plot(fpr["micro"], tpr["micro"],
     #         label='micro-average ROC curve (area = {0:0.4f})'
     #              ''.format(roc_auc["micro"]),
@@ -131,7 +131,7 @@ def roc_curv_plot(labels_val, predIdxs, num_fold):
     plt.show()
     
     # Zoom in view of the upper left corner.
-    plt.figure(2,figsize=(7.5,7.5))
+    plt.figure(2,figsize=(8,8))
     plt.xlim(0, 0.2)
     plt.ylim(0.8, 1.01)
     #plt.plot(fpr["micro"], tpr["macro"],
@@ -144,7 +144,7 @@ def roc_curv_plot(labels_val, predIdxs, num_fold):
                    ''.format(roc_auc["macro"]),
              color='deeppink', linestyle=':', linewidth=4)
     
-    colors = cycle(['green', 'darkorange', 'cornflowerblue']) #, 'cornflowerblue']) #cornflowerblue
+    colors = cycle(['darkorange', 'green', 'cornflowerblue']) #, 'cornflowerblue']) #cornflowerblue
     for i, color in zip(range(n_classes), colors):
         plt.plot(fpr[i], tpr[i], color=color, lw=lw,
                  label='ROC curve of class {0} vs rest of classes (auc = {1:0.5f})' #vs rest of classes
